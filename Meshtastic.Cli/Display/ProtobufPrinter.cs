@@ -78,7 +78,7 @@ public class ProtobufPrinter
             }
             else
             {
-                table.AddRow(node.Num.ToString(),
+                table.AddRow(node.NumAsHexString,
                     container.GetNodeDisplayName(node.Num),
                     (node.Position?.LatitudeI * 1e-7 ?? 0).ToString("N6") ?? String.Empty,
                     (node.Position?.LongitudeI * 1e-7 ?? 0).ToString("N6") ?? String.Empty,
