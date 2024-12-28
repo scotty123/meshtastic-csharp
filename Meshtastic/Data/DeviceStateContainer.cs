@@ -88,10 +88,10 @@ public class DeviceStateContainer
     {
         var node = this.Nodes.Find(n => n.Num == nodeNum);
         if (node == null)
-            return nodeNum.ToString();
+            return nodeNum.ToString("X");
 
         if (!shortName && hideNodeNum)
-            return node?.User?.LongName ?? $"Meshtastic {nodeNum}";
+            return node?.User?.LongName ?? $"Meshtastic {node?.NumAsHexString}";
 
         if (shortName)
             return node?.User?.ShortName ?? String.Empty;
@@ -100,7 +100,7 @@ public class DeviceStateContainer
             return $"{node?.User?.LongName} ({node?.User?.ShortName})";
 
 
-        return $"{node?.User?.LongName} ({node?.User?.ShortName}) - {node?.Num}";
+        return $"{node?.User?.LongName} ({node?.User?.ShortName}) - {node?.NumAsHexString}";
     }
 
     public string GetChannelUrl(int[]? selection = null)

@@ -6044,6 +6044,17 @@ namespace Meshtastic.Protobufs {
       }
     }
 
+    /// <summary>
+    /// Return the node number as a hex string
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string NumAsHexString
+    {
+      get { return num_.ToString("X"); }
+      set {   }
+    }
+
     /// <summary>Field number for the "user" field.</summary>
     public const int UserFieldNumber = 2;
     private global::Meshtastic.Protobufs.User user_;
@@ -6692,6 +6703,14 @@ namespace Meshtastic.Protobufs {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string MyNodeNumAsHexString
+    {
+      get { return MyNodeNum.ToString("X"); }
+      set {  }
+    }
+
     /// <summary>Field number for the "reboot_count" field.</summary>
     public const int RebootCountFieldNumber = 8;
     private uint rebootCount_;
@@ -6897,6 +6916,7 @@ namespace Meshtastic.Protobufs {
       }
       if (other.MyNodeNum != 0) {
         MyNodeNum = other.MyNodeNum;
+
       }
       if (other.RebootCount != 0) {
         RebootCount = other.RebootCount;
